@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Example</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Structure globale de la page pour que le footer reste en bas */
+  
+    .footer {
+      background: transparent;
+      border: 2px solid rgba(255,255,255, .2) ;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      color: #fff;
+      padding: 40px 0 10px; /* 10px en bas pour réduire l'espace après les sections */
+    }
+    .footer .footercontainer{
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+    .footerabout{
+      width: 300px;
+    }
+    .footer a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .footer .social-icons a {
+      margin: 0 10px;
+      font-size: 24px;
+      color:#fff;
+      margin-top: 20px;
+    }
+    .footer .social-icons a i:hover{
+      transform: scale(1.3);
+      color: #00FF00;
+    }
+    .footer .social-icons a i {
+          transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+        }
+    .footer h6, .footer p {
+      margin: 0;
+    }
+    
+    .footer .copyright {
+      text-align: center;
+      padding-top: 10px;
+      font-size: 14px;
+    }
+    @media screen and (max-width: 992px){
+      .footer .footercontainer{
+        display: block;
+       
+       
+      }
+      .footerabout{
+      width: 90%;
+    
+      margin: 40px auto;
+    }
+    }
+  </style>
+</head>
+<body>
+  <footer class="footer " id="a">
+    <div class="footercontainer">
+      <div class="footerabout ">
+          <h6 style="color: #00FF00;">About TOMOBILTI</h6>
+          <p style="margin-top: 20px;color: #fff;">Discover a convenient way to reserve a car for your travels or share your vehicle with others. Join our community to
+             enjoy easy, reliable, and flexible car reservation services.</p>
+        </div>
+        <div class="">
+          <h6 style="color: #00FF00;">Around TOMOBILTI</h6>
+          <div class="social-icons" style="margin-top: 30px;">
+            <a href="https:/www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https:/www.twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/ussvama__/"><i class="fab fa-instagram"></i></a>
+            <a href="https:/www.whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        
+      </div>
+      <div class="copyright">
+        <p>&copy; TOMOBILTI 2024</p>
+      </div>
+  
+  </footer>
+
+</body>
+</html>

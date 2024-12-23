@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        * {
+    
+    font-family: "Poppins", sans-serif;  
+
+}
+        #nav1{
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            margin: 0 auto;
+            width: 100%;
+            background: transparent;
+            border: 2px solid rgba(255,255,255, .2) ;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            border-radius: 20px;
+            width: 85%;
+            padding-bottom:10px ;
+        }
+        .nav1items{
+          display: flex;
+         gap: 5rem;
+        margin-top: 18px;
+        list-style-type: none;
+        }
+        .nav1items a{
+          color:#fff;
+            text-decoration: none; 
+        }
+        .nav1items a:hover{
+          color:white;
+            transform: scale(1.2);
+            letter-spacing: 1px;
+        }
+        .nav1items a {
+          transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+        }
+       
+        .btn i{
+          font-size: 35px;
+          cursor: pointer;
+          display: none;
+        }
+        .dropdown_menu{
+          z-index: 1;
+          display: none;
+          position: absolute;
+          right: 2rem;
+          top:60px;
+          width:300px;
+        background-color:rgb(49, 48, 48);
+        backdrop-filter: blur(15px);
+        margin-top: 20px;
+        overflow: hidden;
+        border-radius: 20px;
+        height: 0;
+        transition: height 0.5s ease-in;
+        }
+        
+        .dropdown_menu li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 15px;
+          
+        }
+        .dropdown_menu li a{
+          color: #fff;
+          text-decoration: none;
+
+        }
+        .dropdown_menu li a:hover{
+          transform: scale(1.2);
+        }
+        .dropdown_menu li >#loginnow,#regesternow{
+          width: 90%;
+          text-align: center;
+          margin-bottom: 3px;
+        }
+        .dropdown_menu.open{
+          height: 270px;
+        }
+        .fa-heart{
+            color: #00FF00 !important;
+        }
+        @media screen and (max-width: 992px){
+          .nav1items,.bottonitems{
+            display: none;
+          }
+          .btn i{
+            display: block;
+           
+          }
+          #nav1{
+            justify-content: space-around;
+           
+          }
+          .dropdown_menu{
+            display: block;
+          }
+        }
+        @media screen and (max-width: 576px){
+          .dropdown_menu{
+            left: 2rem;
+            width: 90%;
+          }
+        }
+    </style>
+</head>
+<body>
+<nav id="nav1">
+ <div class="logo">
+  <a href="accueil2.php"><img src="tomobiltilogo.png" alt="logo" style="width: 100px;height: 100px;margin-left: -10px;"></a>
+</div>
+ <ul class="nav1items">
+   
+  <li><a href="service.php">Service</a></li>
+  <li><a href="contacter.php">Contact</a></li>
+  <li><a href="profile.php">Profile</a></li>
+  <li><a href="ajoutervoiture1.php">Add Your Car </a></li>
+  <li ><a href="voitures.php">See Cars </a></li>
+  <li><a href="favorites.php"><i class='fa fa-heart'></i></a></li> 
+  <li ><a href="logout.php">log out </a></li>
+  </ul>
+    <div class="btn">
+      <i  class="fa fa-bars" style="color: #00FF00;"></i>
+    </div>
+</nav>
+<script>
+  const btn=document.querySelector(".btn");
+  const btnicon=document.querySelector(".btn i");
+  const dropdown_menu=document.querySelector(".dropdown_menu");
+  btnicon.onclick=function(){
+    dropdown_menu.classList.toggle('open');
+    const isopen=dropdown_menu.classList.contains('open');
+     btnicon.classList= isopen ?'fa fa-times' : 'fa fa-bars';
+  }
+</script>
+
+
+</body>
+</html>
